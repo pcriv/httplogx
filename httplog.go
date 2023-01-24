@@ -107,7 +107,7 @@ func (l *RequestLoggerEntry) Write(status, bytes int, header http.Header, elapse
 	}
 
 	l.Logger.WithLevel(statusLevel(status)).Fields(map[string]interface{}{
-		"httpResponse": responseLog,
+		"http_response": responseLog,
 	}).Msgf(msg)
 }
 
